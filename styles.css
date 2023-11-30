@@ -58,36 +58,37 @@ button {
 #buttons1 {
     display: flex;
     flex-direction: row;
-    row-gap: 5px;
+    gap: 10px;
 }
 
 #buttons2 {
     display: flex;
     flex-direction: row;
-    row-gap: 5px;
+    gap: 10px;
 }
 
 #buttons3 {
     display: flex;
     flex-direction: row;
-    row-gap: 5px;
+    gap: 10px;
 }
 
 #buttons4 {
     display: flex;
     flex-direction: row;
-    row-gap: 5px;
+    gap: 10px;
 }
 
 #buttons5 {
     display: flex;
     flex-direction: row;
-    row-gap: 5px;
+    gap: 10px;
 }
 
 #ac {
     background-color: darksalmon;
 }
+
 #ac:hover {
     background-color: crimson;
 }
