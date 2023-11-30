@@ -17,7 +17,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#display {
+.display {
     background-color: white;
     border: 1px solid #ccc;
     padding: 30px;
@@ -28,6 +28,7 @@ body {
 button {
     border-radius: 10px;
     padding: 30px;
+    margin: 2px;
 }
 
 .buttons {
@@ -42,8 +43,16 @@ button {
     color: gold;
 }
 
+#delete:hover {
+    background-color: darkred;
+}
+
 #equals {
     background-color: chartreuse;
+}
+
+#equals:hover {
+    background-color: green;
 }
 
 #buttons1 {
@@ -73,5 +82,12 @@ button {
 #buttons5 {
     display: flex;
     flex-direction: row;
-    row-gap: 10px;
+    row-gap: 5px;
+}
+
+#ac {
+    background-color: darksalmon;
+}
+#ac:hover {
+    background-color: crimson;
 }
