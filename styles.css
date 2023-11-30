@@ -1,6 +1,6 @@
 body {
     background-color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+    background-color: azure;
     width: 300px;
     border: 2px solid #ccc;
     padding: 10px;
@@ -21,5 +22,56 @@ body {
     border: 1px solid #ccc;
     padding: 30px;
     text-align: right;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
+}
+
+button {
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#delete {
+    background-color: indianred;
+    color: gold;
+}
+
+#equals {
+    background-color: chartreuse;
+}
+
+#buttons1 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 5px;
+}
+
+#buttons2 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 5px;
+}
+
+#buttons3 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 5px;
+}
+
+#buttons4 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 5px;
+}
+
+#buttons5 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
 }
