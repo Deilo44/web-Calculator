@@ -17,3 +17,26 @@ document.getElementById('delete').addEventListener('click', del);
 document.getElementById('c').addEventListener('click', clear);
 document.getElementById('ac').addEventListener('click', reset);
 document.getElementById('equals').addEventListener('click', equals);
+
+const display = document.getElementById('display');
+let displayCurrent ="";
+
+function input {
+
+}
+
+function del {
+
+}
+
+function reset {
+
+}
+
+function clear {
+
+}
+
+function equals {
+    
+}
