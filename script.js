@@ -14,7 +14,6 @@ document.getElementById('multiply').addEventListener('click', input);
 document.getElementById('slash').addEventListener('click', input);
 document.getElementById('percent').addEventListener('click', input);
 document.getElementById('delete').addEventListener('click', del);
-document.getElementById('c').addEventListener('click', clear);
 document.getElementById('ac').addEventListener('click', reset);
 document.getElementById('equals').addEventListener('click', equals);
 
@@ -28,15 +27,13 @@ function input(e) {
 }
 
 function del() {
-
+    displayCurrent= displayCurrent.substring(0, displayCurrent.length -1);
+    display.innerText = displayCurrent;
 }
 
 function reset() {
-
-}
-
-function clear() {
-
+    displayCurrent= "";
+    display.innerText =displayCurrent;
 }
 
 function equals() {
