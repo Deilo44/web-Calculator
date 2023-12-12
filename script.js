@@ -1,18 +1,18 @@
-document.getElementById('1').addEventListener('click', input);
-document.getElementById('2').addEventListener('click', input);
-document.getElementById('3').addEventListener('click', input);
-document.getElementById('4').addEventListener('click', input);
-document.getElementById('5').addEventListener('click', input);
-document.getElementById('6').addEventListener('click', input);
-document.getElementById('7').addEventListener('click', input);
-document.getElementById('8').addEventListener('click', input);
-document.getElementById('9').addEventListener('click', input);
-document.getElementById('0').addEventListener('click', input);
-document.getElementById('+').addEventListener('click', input);
-document.getElementById('-').addEventListener('click', input);
-document.getElementById('*').addEventListener('click', input);
-document.getElementById('/').addEventListener('click', input);
-document.getElementById('%').addEventListener('click', input);
+document.getElementById('one').addEventListener('click', input);
+document.getElementById('two').addEventListener('click', input);
+document.getElementById('three').addEventListener('click', input);
+document.getElementById('four').addEventListener('click', input);
+document.getElementById('five').addEventListener('click', input);
+document.getElementById('six').addEventListener('click', input);
+document.getElementById('seven').addEventListener('click', input);
+document.getElementById('eight').addEventListener('click', input);
+document.getElementById('nine').addEventListener('click', input);
+document.getElementById('o').addEventListener('click', input);
+document.getElementById('plus').addEventListener('click', input);
+document.getElementById('subtract').addEventListener('click', input);
+document.getElementById('multiply').addEventListener('click', input);
+document.getElementById('slash').addEventListener('click', input);
+document.getElementById('percent').addEventListener('click', input);
 document.getElementById('delete').addEventListener('click', del);
 document.getElementById('c').addEventListener('click', clear);
 document.getElementById('ac').addEventListener('click', reset);
@@ -21,22 +21,24 @@ document.getElementById('equals').addEventListener('click', equals);
 const display = document.getElementById('display');
 let displayCurrent ="";
 
-function input {
+function input(e) {
+    let inputValve =e.target.innerText;
+    displayCurrent += inputValve;
+    display.innerText = displayCurrent;
+}
+
+function del() {
 
 }
 
-function del {
+function reset() {
 
 }
 
-function reset {
+function clear() {
 
 }
 
-function clear {
-
-}
-
-function equals {
+function equals() {
     
 }

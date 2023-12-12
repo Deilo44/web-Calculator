@@ -92,3 +92,71 @@ button {
 #ac:hover {
     background-color: crimson;
 }
+
+#o:hover {
+    background-color: darkgray;
+}
+
+#c:hover {
+    background-color: darkgray;
+}
+
+#slash:hover {
+    background-color: darkgray;   
+}
+
+#seven:hover {
+    background-color: darkgray;
+}
+
+#eight:hover {
+    background-color: darkgray;   
+}
+
+#nine:hover {
+    background-color: darkgray;   
+}
+
+#multiply:hover {
+    background-color: darkgray;   
+}
+
+#four:hover {
+    background-color: darkgray;   
+}
+
+#five:hover {
+    background-color: darkgray;   
+}
+
+#six:hover {
+    background-color: darkgray;   
+}
+
+#subtract:hover {
+    background-color: darkgray;   
+}
+
+#one:hover {
+    background-color: darkgray;   
+}
+
+#two:hover {
+    background-color: darkgray;   
+}
+
+#three:hover {
+    background-color: darkgray;   
+}
+
+#plus:hover {
+    background-color: darkgray;   
+}
+
+#point:hover {
+    background-color: darkgray;   
+}
+
+#percent:hover {
+    background-color: darkgray;   
+}
