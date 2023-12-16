@@ -8,11 +8,11 @@ document.getElementById('seven').addEventListener('click', input);
 document.getElementById('eight').addEventListener('click', input);
 document.getElementById('nine').addEventListener('click', input);
 document.getElementById('o').addEventListener('click', input);
-document.getElementById('plus').addEventListener('click', input);
+document.getElementById('plus').addEventListener('click', add);
 document.getElementById('subtract').addEventListener('click', input);
 document.getElementById('multiply').addEventListener('click', input);
 document.getElementById('slash').addEventListener('click', input);
-document.getElementById('percent').addEventListener('click', input);
+document.getElementById('percent').addEventListener('click', percent);
 document.getElementById('delete').addEventListener('click', del);
 document.getElementById('ac').addEventListener('click', reset);
 document.getElementById('equals').addEventListener('click', equals);
@@ -37,5 +37,26 @@ function reset() {
 }
 
 function equals() {
+    let answer = parseInt(displayCurrent);
+    display.innerText= answer;
+}
+
+function add(){
+
+}
+
+function minus(){
+    
+}
+
+function times(){
+    
+}
+
+function divide(){
+    
+}
+
+function percent(){
     
 }
