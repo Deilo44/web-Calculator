@@ -37,24 +37,37 @@ function reset() {
 }
 
 function equals() {
-    let answer = parseInt(displayCurrent);
-    display.innerText= answer;
-}
-
-function add(){
-
-}
-
-function minus(){
-    
-}
-
-function times(){
-    
-}
-
-function divide(){
-    
+     const compute = (displayCurrent='') => {
+        let total = 0;
+        let word = displayCurrent.match(/[+\-*/]?\d+(\.\d+)?/g) || [];
+      
+        while (word.length){
+          const taken =word.shift();
+          const operator = taken[0];
+          const value = parseFloat(taken.slice(1));
+      
+          switch(operator){
+            case '+' :
+              total += value;
+              break;
+      
+            case '-' :
+              total -= value;
+              break;
+      
+            case '*' :
+              total *=value;
+              break;
+      
+            case '/' :
+              total /= value;
+              break;
+          }
+        }
+        return total;
+      };
+      let answer = compute(displayCurrent);
+        display.innerText= answer;
 }
 
 function percent(){
