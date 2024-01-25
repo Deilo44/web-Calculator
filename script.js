@@ -8,11 +8,11 @@ document.getElementById('seven').addEventListener('click', input);
 document.getElementById('eight').addEventListener('click', input);
 document.getElementById('nine').addEventListener('click', input);
 document.getElementById('o').addEventListener('click', input);
-document.getElementById('plus').addEventListener('click', add);
+document.getElementById('plus').addEventListener('click', input);
 document.getElementById('subtract').addEventListener('click', input);
 document.getElementById('multiply').addEventListener('click', input);
 document.getElementById('slash').addEventListener('click', input);
-document.getElementById('percent').addEventListener('click', percent);
+document.getElementById('percent').addEventListener('click', input);
 document.getElementById('delete').addEventListener('click', del);
 document.getElementById('ac').addEventListener('click', reset);
 document.getElementById('equals').addEventListener('click', equals);
@@ -35,3 +35,46 @@ function reset() {
     displayCurrent= "";
     display.innerText =displayCurrent;
 }
+
+function calculate (displayCurrent){
+    console.log(displayCurrent);
+        let total = 0;
+        let word = displayCurrent.match(/[+\-*/]?\d+(\.\d+)?/g) || [];
+      
+        while (word.length){
+          const taken =word.shift();
+          const operator = taken[0];
+          const value = parseFloat(taken.slice(1));
+      
+          switch(operator){
+            case '+' :
+              total += value;
+              break;
+      
+            case '-' :
+              total -= value;
+              break;
+      
+            case '*' :
+              total *=value;
+              break;
+      
+            case '/' :
+              total /= value;
+              break;
+
+            default:
+                total += value;
+                break;
+          }
+        }
+        console.log(total);
+        return total;
+        
+      };
+
+      function equals(){
+        let answer= calculate(display.innerText);
+        display.innerText= answer;
+        console.log(answer);
+      }
