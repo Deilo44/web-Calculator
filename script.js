@@ -36,45 +36,6 @@ function reset() {
     display.innerText =displayCurrent;
 }
 
-function calculate (displayCurrent){
-    console.log(displayCurrent);
-        let total = 0;
-        let word = displayCurrent.match(/[+\-*/]?\d+(\.\d+)?/g) || [];
-      
-        while (word.length){
-          const taken =word.shift();
-          const operator = taken[0];
-          const value = parseFloat(taken.slice(1));
-      
-          switch(operator){
-            case '+' :
-              total += value;
-              break;
-      
-            case '-' :
-              total -= value;
-              break;
-      
-            case '*' :
-              total *=value;
-              break;
-      
-            case '/' :
-              total /= value;
-              break;
+function equals(){
 
-            default:
-                total += value;
-                break;
-          }
-        }
-        console.log(total);
-        return total;
-        
-      };
-
-      function equals(){
-        let answer= calculate(display.innerText);
-        display.innerText= answer;
-        console.log(answer);
       }
