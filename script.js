@@ -21,25 +21,29 @@ const display = document.getElementById('display');
 let displayCurrent ="";
 
 function input(e) {
-    let inputValve =e.target.innerText;
+    let inputValve =e.target.innerHTML;
     displayCurrent += inputValve;
-    display.innerText = displayCurrent;
+    display.innerHTML = displayCurrent;
 }
 
 function del() {
     displayCurrent= displayCurrent.substring(0, displayCurrent.length -1);
-    display.innerText = displayCurrent;
+    display.innerHTML = displayCurrent;
 }
 
 function reset() {
     displayCurrent= "";
-    display.innerText =displayCurrent;
+    display.innerHTML =displayCurrent;
 }
 
-function equals(){
-  var inputString = display.innerText;
+function calculate(){
+  var inputString = display.innerHTML;
   var numbers = inputString.split(/\+|\-|\*|\//g);
-  var operators = inputString.split(/[0-9]|\./g,"").split("");
+  var operators = inputString.replace(/[0-9]|\./g,"").split(" ");
+
+  console.log(inputString);
+  console.log(numbers);
+  console.log(operators);
 
   var divide = operators.indexOf("/");
   while(divide !=-1){
@@ -68,7 +72,14 @@ function equals(){
     operators.splice(add,1);
     add= operators.indexOf("+");
   }
+  console.log(numbers[0]);
+  return numbers[0];
 
-  displayCurrent= numbers[0];
-  display.innerText= displayCurrent;
+}
+
+function equals(){
+    let string = displayCurrent.innerHTML;
+    let answer = calculate(string);
+    displayCurrent= answer;
+    display.innerHTML= displayCurrent; 
 }
