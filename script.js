@@ -41,10 +41,6 @@ function calculate(){
   var numbers = inputString.split(/\+|\-|\*|\//g);
   var operators = inputString.replace(/[0-9]|\./g,"").split(" ");
 
-  console.log(inputString);
-  console.log(numbers);
-  console.log(operators);
-
   var divide = operators.indexOf("/");
   while(divide !=-1){
     numbers.splice(divide,2,numbers[divide]/numbers[divide + 1]);
@@ -72,9 +68,7 @@ function calculate(){
     operators.splice(add,1);
     add= operators.indexOf("+");
   }
-  console.log(numbers[0]);
   return numbers[0];
-
 }
 
 function equals(){
