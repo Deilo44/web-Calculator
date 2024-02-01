@@ -8,6 +8,7 @@ document.getElementById('seven').addEventListener('click', input);
 document.getElementById('eight').addEventListener('click', input);
 document.getElementById('nine').addEventListener('click', input);
 document.getElementById('o').addEventListener('click', input);
+document.getElementById('point').addEventListener('click', input);
 document.getElementById('plus').addEventListener('click', input);
 document.getElementById('subtract').addEventListener('click', input);
 document.getElementById('multiply').addEventListener('click', input);
