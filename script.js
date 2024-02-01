@@ -12,7 +12,6 @@ document.getElementById('plus').addEventListener('click', input);
 document.getElementById('subtract').addEventListener('click', input);
 document.getElementById('multiply').addEventListener('click', input);
 document.getElementById('slash').addEventListener('click', input);
-document.getElementById('percent').addEventListener('click', input);
 document.getElementById('delete').addEventListener('click', del);
 document.getElementById('ac').addEventListener('click', reset);
 document.getElementById('equals').addEventListener('click', equals);
@@ -23,10 +22,11 @@ const previousDisplay = document.getElementById('miniDisplay');
 let displayPrevious = "";
 
 function input(e) {
-    let inputValve =e.target.innerHTML;
-    displayCurrent += inputValve;
-    display.innerHTML = displayCurrent;
-}
+        let inputValve =e.target.innerHTML;
+        displayCurrent += inputValve;
+        display.innerHTML = displayCurrent;
+        displayPrevious = displayCurrent;
+    }
 
 function del() {
     displayCurrent= displayCurrent.substring(0, displayCurrent.length -1);
@@ -37,7 +37,7 @@ function reset() {
     displayCurrent= "";
     displayPrevious= "";
     display.innerHTML =displayCurrent;
-    miniDisplay.innerHTML=displayPrevious;
+    previousDisplay.innerHTML=displayPrevious;
 }
 
 function calculate(){
@@ -77,9 +77,8 @@ function calculate(){
 
 function equals(){
     let string = displayCurrent.innerHTML;
-    displayPrevious= string;
     let answer = calculate(string);
     displayCurrent= answer;
     display.innerHTML= displayCurrent;
-    miniDisplay.innerHTML=displayPrevious; 
+    previousDisplay.innerHTML=displayPrevious;
 }
