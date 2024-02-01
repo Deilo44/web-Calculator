@@ -78,7 +78,10 @@ function calculate(){
 function equals(){
     let string = displayCurrent.innerHTML;
     let answer = calculate(string);
+    let view = "=";
     displayCurrent= answer;
-    display.innerHTML= displayCurrent;
-    previousDisplay.innerHTML=displayPrevious;
+    display.innerHTML= " ";
+    previousDisplay.innerHTML=displayPrevious + view + answer;
+    displayCurrent=" ";
+
 }
