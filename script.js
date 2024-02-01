@@ -45,7 +45,7 @@ function reset() {
 function calculate(){
   var inputString = display.innerHTML;
   var numbers = inputString.split(/\+|\-|\*|\//g);
-  var operators = inputString.replace(/[0-9]|\./g,"").split(" ");
+  var operators = inputString.replace(/[0-9]|\./g,"").split("");
 
   console.log(inputString);
   console.log(numbers);
