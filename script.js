@@ -13,6 +13,7 @@ document.getElementById('plus').addEventListener('click', input);
 document.getElementById('subtract').addEventListener('click', input);
 document.getElementById('multiply').addEventListener('click', input);
 document.getElementById('slash').addEventListener('click', input);
+document.getElementById('percent').addEventListener('click',precentage);
 document.getElementById('delete').addEventListener('click', del);
 document.getElementById('ac').addEventListener('click', reset);
 document.getElementById('equals').addEventListener('click', equals);
@@ -85,6 +86,15 @@ function equals(){
     let answer = calculate(string);
     let view = "=";
     previousDisplay.innerHTML=displayPrevious + view + answer;
+    displayCurrent="";
+    display.innerHTML=displayCurrent;
+}
+
+function precentage(){
+    let number = displayCurrent.innerHTML;
+    let value =parseFloat(number)/100;
+    let view= "%"
+    previousDisplay.innerHTML=value + view;
     displayCurrent="";
     display.innerHTML=displayCurrent;
 }
