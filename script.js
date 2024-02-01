@@ -20,7 +20,6 @@ const display = document.getElementById('display');
 let displayCurrent ="";
 const previousDisplay = document.getElementById('miniDisplay');
 let displayPrevious = "";
-let view = false;
 
 function input(e) {
         let inputValve =e.target.innerHTML;
@@ -87,5 +86,4 @@ function equals(){
     previousDisplay.innerHTML=displayPrevious + view + answer;
     displayCurrent="";
     display.innerHTML=displayCurrent;
-    view= true;
 }
