@@ -20,6 +20,7 @@ const display = document.getElementById('display');
 let displayCurrent ="";
 const previousDisplay = document.getElementById('miniDisplay');
 let displayPrevious = "";
+let view = false;
 
 function input(e) {
         let inputValve =e.target.innerHTML;
@@ -44,6 +45,10 @@ function calculate(){
   var inputString = display.innerHTML;
   var numbers = inputString.split(/\+|\-|\*|\//g);
   var operators = inputString.replace(/[0-9]|\./g,"").split(" ");
+
+  console.log(inputString);
+  console.log(numbers);
+  console.log(operators);
 
   var divide = operators.indexOf("/");
   while(divide !=-1){
@@ -79,9 +84,8 @@ function equals(){
     let string = displayCurrent.innerHTML;
     let answer = calculate(string);
     let view = "=";
-    displayCurrent= answer;
-    display.innerHTML= " ";
     previousDisplay.innerHTML=displayPrevious + view + answer;
-    displayCurrent=" ";
-
+    displayCurrent="";
+    display.innerHTML=displayCurrent;
+    view= true;
 }
