@@ -91,9 +91,9 @@ function equals(){
 }
 
 function precentage(){
-    let number = displayCurrent.innerHTML;
-    let value =parseFloat(number)/100;
-    let view= "%"
+    let number = displayCurrent;
+    let value = number / 100;
+    let view= "%";
     previousDisplay.innerHTML=value + view;
     displayCurrent="";
     display.innerHTML=displayCurrent;
