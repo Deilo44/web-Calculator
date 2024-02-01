@@ -47,10 +47,6 @@ function calculate(){
   var numbers = inputString.split(/\+|\-|\*|\//g);
   var operators = inputString.replace(/[0-9]|\./g,"").split("");
 
-  console.log(inputString);
-  console.log(numbers);
-  console.log(operators);
-
   var divide = operators.indexOf("/");
   while(divide !=-1){
     numbers.splice(divide,2,numbers[divide]/numbers[divide + 1]);
