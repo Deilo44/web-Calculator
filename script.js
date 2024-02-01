@@ -8,7 +8,7 @@ document.getElementById('seven').addEventListener('click', input);
 document.getElementById('eight').addEventListener('click', input);
 document.getElementById('nine').addEventListener('click', input);
 document.getElementById('o').addEventListener('click', input);
-document.getElementById('point').addEventListener('click', input);
+document.getElementById('point').addEventListener('click', decimal);
 document.getElementById('plus').addEventListener('click', input);
 document.getElementById('subtract').addEventListener('click', input);
 document.getElementById('multiply').addEventListener('click', input);
@@ -22,6 +22,16 @@ const display = document.getElementById('display');
 let displayCurrent ="";
 const previousDisplay = document.getElementById('miniDisplay');
 let displayPrevious = "";
+let pointer = false;
+
+    function decimal(e){
+        if(pointer=== false){
+            let inputValve = e.target.innerHTML;
+            displayCurrent += inputValve;
+            display.innerHTML = displayCurrent;
+            pointer = true;
+        }
+}
 
 function input(e) {
         let inputValve =e.target.innerHTML;
@@ -40,6 +50,7 @@ function reset() {
     displayPrevious= "";
     display.innerHTML =displayCurrent;
     previousDisplay.innerHTML=displayPrevious;
+    pointer=false;
 }
 
 function calculate(){
@@ -84,6 +95,7 @@ function equals(){
     previousDisplay.innerHTML=displayPrevious + view + answer;
     displayCurrent="";
     display.innerHTML=displayCurrent;
+    pointer= false;
 }
 
 function precentage(){
@@ -93,4 +105,5 @@ function precentage(){
     previousDisplay.innerHTML=value + view;
     displayCurrent="";
     display.innerHTML=displayCurrent;
+    pointer= false;
 }
