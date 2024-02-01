@@ -17,6 +17,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.miniDisplay {
+    background-color: rgb(197, 217, 236);
+    padding: 5%;
+    color: crimson;
+}
+
 .display {
     background-color: white;
     border: 1px solid #ccc;

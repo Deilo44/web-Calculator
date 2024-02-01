@@ -19,6 +19,8 @@ document.getElementById('equals').addEventListener('click', equals);
 
 const display = document.getElementById('display');
 let displayCurrent ="";
+const previousDisplay = document.getElementById('miniDisplay');
+let displayPrevious = "";
 
 function input(e) {
     let inputValve =e.target.innerHTML;
@@ -33,7 +35,9 @@ function del() {
 
 function reset() {
     displayCurrent= "";
+    displayPrevious= "";
     display.innerHTML =displayCurrent;
+    miniDisplay.innerHTML=displayPrevious;
 }
 
 function calculate(){
@@ -73,7 +77,9 @@ function calculate(){
 
 function equals(){
     let string = displayCurrent.innerHTML;
+    displayPrevious= string;
     let answer = calculate(string);
     displayCurrent= answer;
-    display.innerHTML= displayCurrent; 
+    display.innerHTML= displayCurrent;
+    miniDisplay.innerHTML=displayPrevious; 
 }
