@@ -9,10 +9,10 @@ document.getElementById('eight').addEventListener('click', input);
 document.getElementById('nine').addEventListener('click', input);
 document.getElementById('o').addEventListener('click', input);
 document.getElementById('point').addEventListener('click', decimal);
-document.getElementById('plus').addEventListener('click', input);
-document.getElementById('subtract').addEventListener('click', input);
-document.getElementById('multiply').addEventListener('click', input);
-document.getElementById('slash').addEventListener('click', input);
+document.getElementById('plus').addEventListener('click', run);
+document.getElementById('subtract').addEventListener('click', run);
+document.getElementById('multiply').addEventListener('click', run);
+document.getElementById('slash').addEventListener('click', run);
 document.getElementById('percent').addEventListener('click',precentage);
 document.getElementById('delete').addEventListener('click', del);
 document.getElementById('ac').addEventListener('click', reset);
@@ -24,13 +24,20 @@ const previousDisplay = document.getElementById('miniDisplay');
 let displayPrevious = "";
 let pointer = false;
 
-    function decimal(e){
-        if(pointer=== false){
-            let inputValve = e.target.innerHTML;
-            displayCurrent += inputValve;
-            display.innerHTML = displayCurrent;
-            pointer = true;
+function decimal(e){
+    if(pointer=== false){
+        let inputValve = e.target.innerHTML;
+        displayCurrent += inputValve;
+        display.innerHTML = displayCurrent;
+        pointer = true;
         }
+}
+
+function run(e){
+    let inputValve = e.target.innerHTML;
+    displayCurrent += inputValve;
+    display.innerHTML = displayCurrent;
+    pointer=false;
 }
 
 function input(e) {
